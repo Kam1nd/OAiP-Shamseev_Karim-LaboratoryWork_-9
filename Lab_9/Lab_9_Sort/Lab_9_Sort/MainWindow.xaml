@@ -12,15 +12,16 @@
             <StackPanel>
                 <GroupBox Header="Сгенерировать массив:" Margin="0,0,0,10">
                     <StackPanel>
-                        <Slider x:Name="SliderSize" Minimum="5" Maximum="200" Value="50" 
+                        <Slider x:Name="SliderSize" Minimum="2" Maximum="200" Value="50" 
                                 TickFrequency="5" IsSnapToTickEnabled="True" Margin="0,5"
                                 ValueChanged="SliderSize_ValueChanged"/>
                         <StackPanel Orientation="Horizontal" Margin="0,5">
                             <TextBlock Text="Количество элементов массива:" VerticalAlignment="Center"/>
                             <TextBox x:Name="TxtSize" Text="50" Width="50" Margin="5,0,0,0" 
-                                     TextChanged="TxtSize_TextChanged"/>
+             TextChanged="TxtSize_TextChanged" 
+             ToolTipService.InitialShowDelay="0" />
                         </StackPanel>
-                        <Button Content="Сгенерировать массив" Click="BtnGenerate_Click" Margin="0,5"/>
+                        <Button Content="Сгенерировать массив"  x:Name="BtnGenerate" Click="BtnGenerate_Click" Margin="0,5"/>
                         <Button Content="Массив из файла" Click="BtnLoad_Click" Margin="0,5"/>
                     </StackPanel>
                 </GroupBox>
